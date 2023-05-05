@@ -1,0 +1,25 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: service_edu
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.236.134:3307/guli?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#    启动 mybatis 本身的 log 日志
+logging:
+  level:
+    com.atguigu.mapper: debug
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+#      因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+spring.mvc.pathmatch.matching-strategy: ANT_PATH_MATCHER
