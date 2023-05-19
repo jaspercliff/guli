@@ -14,9 +14,10 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 #    启动 mybatis 本身的 log 日志
-logging:
-  level:
-    com.atguigu.mapper: debug
+#logging:
+#  level:
+#    com.atguigu.mapper: debug
+#    root: info #项目的日志
 mybatis-plus:
   global-config:
     db-config:

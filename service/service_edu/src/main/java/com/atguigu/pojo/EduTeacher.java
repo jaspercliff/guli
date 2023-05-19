@@ -3,11 +3,14 @@ package com.atguigu.pojo;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
 /**
  * 讲师
+ * @author jasper
  * @TableName edu_teacher
  */
 @TableName(value ="edu_teacher")
@@ -64,14 +67,14 @@ public class EduTeacher implements Serializable {
     /**
      * 创建时间
      */
-    @TableField(value = "gmt_create")
-    private Date gmtCreate;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime gmtCreate;
 
     /**
      * 更新时间
      */
-    @TableField(value = "gmt_modified")
-    private Date gmtModified;
+    @TableField( fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime gmtModified;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

@@ -1,0 +1,973 @@
+2023-05-12 03:00:34.997 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h53m5s143ms927µs200ns).
+2023-05-12 03:00:44.383 [HikariPool-1 connection adder] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Error thrown while acquiring connection from data source
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,390 milliseconds ago. The last packet sent successfully to the server was 5,473 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1398)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1383)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:408)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,390 milliseconds ago. The last packet sent successfully to the server was 5,473 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:581)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:761)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:700)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:155)
+	at com.mysql.cj.NativeSession.queryServerVariable(NativeSession.java:597)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1390)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1271)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:76)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:948)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:575)
+	... 17 common frames omitted
+2023-05-12 09:23:42.718 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h23m34s870ms949µs600ns).
+2023-05-12 22:12:06.051 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-12 22:12:06.062 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-12 22:12:20.509 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 18388 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-12 22:12:20.512 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-12 22:12:21.654 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-12 22:12:21.662 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-12 22:12:21.663 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 22:12:21.821 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-12 22:12:21.822 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1264 ms
+2023-05-12 22:12:23.236 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-12 22:12:23.441 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.425 seconds (JVM running for 4.758)
+2023-05-12 22:12:40.789 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 22:12:40.789 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-12 22:12:40.791 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-12 22:12:40.922 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-12 22:12:41.585 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-12 22:12:41.591 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:12:41.609 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:12:41.624 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:12:41.628 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:12:41.629 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 10(Long)
+2023-05-12 22:12:41.635 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 10
+2023-05-12 22:15:26.946 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-12 22:15:26.958 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-12 22:15:30.673 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 17360 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-12 22:15:30.675 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-12 22:15:31.528 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-12 22:15:31.533 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-12 22:15:31.533 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 22:15:31.647 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-12 22:15:31.648 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 947 ms
+2023-05-12 22:15:32.973 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-12 22:15:33.170 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.815 seconds (JVM running for 3.732)
+2023-05-12 22:16:04.290 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 22:16:04.292 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-12 22:16:04.293 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-12 22:16:04.418 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-12 22:16:05.021 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-12 22:16:05.027 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:16:05.043 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:16:05.058 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:16:05.063 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 22:16:05.064 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 10(Long), 10(Long)
+2023-05-12 22:16:05.069 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 10
+2023-05-12 22:21:43.724 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:21:43.725 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:21:43.727 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:21:43.730 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:21:43.731 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:21:43.741 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:30:04.450 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:30:04.451 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:30:04.453 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:30:04.453 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:30:04.453 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:30:04.458 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:33:08.478 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:33:08.478 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:33:08.480 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:33:08.480 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:33:08.481 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:33:08.482 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:33:34.717 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:33:34.718 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:33:34.721 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:33:34.722 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:33:34.723 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:33:34.725 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:34:50.929 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:34:50.930 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:34:50.931 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:34:50.932 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:34:50.933 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:34:50.936 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:37:18.766 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:37:18.767 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:37:18.769 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:37:18.769 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:37:18.770 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:37:18.772 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:39:19.757 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:39:19.757 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:39:19.759 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:39:19.761 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:39:19.762 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:39:19.764 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:42:54.295 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:42:54.295 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:42:54.296 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:42:54.297 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:42:54.297 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:42:54.301 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:44:20.446 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:44:20.446 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:44:20.447 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:44:20.447 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:44:20.447 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:44:20.449 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:44:49.726 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:44:49.726 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:44:49.727 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:44:49.728 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:44:49.728 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:44:49.730 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:47:02.256 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:47:02.257 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:47:02.259 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:47:02.260 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:47:02.260 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:47:02.263 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:48:07.250 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:48:07.250 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:48:07.251 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:48:07.252 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:48:07.252 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:48:07.254 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:48:27.032 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:48:27.033 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:48:27.034 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:48:27.035 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:48:27.035 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:48:27.036 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:49:12.190 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:49:12.190 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:49:12.193 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:49:12.193 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:49:12.195 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:49:12.196 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:50:57.738 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:50:57.738 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:50:57.739 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:50:57.740 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:50:57.740 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:50:57.743 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:50:58.635 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:50:58.635 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:50:58.637 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:50:58.638 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:50:58.638 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:50:58.640 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:54:56.299 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:54:56.300 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:54:56.301 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:54:56.301 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:54:56.301 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:54:56.304 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:56:23.187 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:56:23.187 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:56:23.188 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:56:23.189 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:56:23.189 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:56:23.190 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:57:05.752 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:57:05.752 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:57:05.753 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:57:05.755 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:57:05.755 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:57:05.757 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 22:57:48.329 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 22:57:48.330 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 22:57:48.331 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 22:57:48.331 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 22:57:48.332 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 22:57:48.334 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:00:21.233 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:00:21.234 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:00:21.236 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:00:21.236 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:00:21.237 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:00:21.238 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:02:43.674 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:02:43.674 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:02:43.676 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:02:43.676 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:02:43.676 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:02:43.679 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:05:12.824 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:05:12.825 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:05:12.828 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:05:12.829 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:05:12.829 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:05:12.831 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:06:11.355 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:06:11.355 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:06:11.357 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:11.358 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:06:11.358 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:06:11.360 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:06:12.644 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:06:12.644 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:06:12.645 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:12.646 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:06:12.646 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:06:12.647 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:06:18.949 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:06:18.949 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:06:18.951 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:18.951 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:06:18.951 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:06:18.952 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:06:38.827 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:06:38.827 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:06:38.828 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:38.829 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:06:38.830 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:06:38.832 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:06:42.968 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:06:42.968 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:06:42.969 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:42.969 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:06:42.970 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:06:42.971 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:06:48.225 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ? AND level = ?)
+2023-05-12 23:06:48.225 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String), 1(Integer)
+2023-05-12 23:06:48.226 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:48.227 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ? AND level = ?) LIMIT ?
+2023-05-12 23:06:48.227 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 1(Integer), 8(Long)
+2023-05-12 23:06:48.228 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:06:51.609 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ? AND level = ?)
+2023-05-12 23:06:51.611 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String), 2(Integer)
+2023-05-12 23:06:51.612 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:54.323 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ? AND level = ?)
+2023-05-12 23:06:54.323 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String), 1(Integer)
+2023-05-12 23:06:54.324 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:06:54.325 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ? AND level = ?) LIMIT ?
+2023-05-12 23:06:54.326 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 1(Integer), 8(Long)
+2023-05-12 23:06:54.327 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:07:05.668 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ? AND level = ? AND gmt_create >= ?)
+2023-05-12 23:07:05.668 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String), 1(Integer), 2018-05-18 00:00:00(String)
+2023-05-12 23:07:05.669 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:07:05.670 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ? AND level = ? AND gmt_create >= ?) LIMIT ?
+2023-05-12 23:07:05.670 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 1(Integer), 2018-05-18 00:00:00(String), 8(Long)
+2023-05-12 23:07:05.671 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:07:07.382 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ? AND level = ? AND gmt_create >= ?)
+2023-05-12 23:07:07.382 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String), 1(Integer), 2018-05-18 00:00:00(String)
+2023-05-12 23:07:07.383 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:07:07.384 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ? AND level = ? AND gmt_create >= ?) LIMIT ?
+2023-05-12 23:07:07.384 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 1(Integer), 2018-05-18 00:00:00(String), 8(Long)
+2023-05-12 23:07:07.386 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:07:16.888 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:07:16.889 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:07:16.890 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:07:16.891 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:07:16.891 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:07:16.893 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:08:53.478 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:08:53.478 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:08:53.479 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:08:53.479 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:08:53.479 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:08:53.481 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:09:39.921 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:09:39.921 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:09:39.922 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:09:39.923 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:09:39.923 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:09:39.924 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:25.633 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:25.634 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2023-05-12 23:11:24(String)
+2023-05-12 23:11:25.635 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:25.635 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:25.635 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2023-05-12 23:11:24(String), 8(Long)
+2023-05-12 23:11:25.637 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:26.319 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:26.319 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2023-05-12 23:11:24(String)
+2023-05-12 23:11:26.320 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:26.321 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:26.322 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2023-05-12 23:11:24(String), 8(Long)
+2023-05-12 23:11:26.324 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:33.871 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:33.871 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-09 23:11:24(String)
+2023-05-12 23:11:33.872 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:33.873 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:33.873 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-09 23:11:24(String), 8(Long)
+2023-05-12 23:11:33.875 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:36.646 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:36.646 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-09 23:11:24(String)
+2023-05-12 23:11:36.647 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:36.648 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?,?
+2023-05-12 23:11:36.648 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-09 23:11:24(String), 8(Long), 8(Long)
+2023-05-12 23:11:36.650 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:38.134 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:38.134 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-09 23:11:24(String)
+2023-05-12 23:11:38.135 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:38.136 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:38.136 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-09 23:11:24(String), 8(Long)
+2023-05-12 23:11:38.139 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:45.535 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:45.535 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-02 23:11:24(String)
+2023-05-12 23:11:45.536 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:45.537 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:45.537 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-02 23:11:24(String), 8(Long)
+2023-05-12 23:11:45.539 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:46.915 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:46.916 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-02 23:11:24(String)
+2023-05-12 23:11:46.917 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:46.918 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:46.919 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-02 23:11:24(String), 8(Long)
+2023-05-12 23:11:46.920 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:47.177 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:47.178 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-02 23:11:24(String)
+2023-05-12 23:11:47.179 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:47.180 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:47.180 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-02 23:11:24(String), 8(Long)
+2023-05-12 23:11:47.182 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:47.393 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:47.393 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2019-05-02 23:11:24(String)
+2023-05-12 23:11:47.395 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:47.395 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:47.396 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2019-05-02 23:11:24(String), 8(Long)
+2023-05-12 23:11:47.397 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:11:56.756 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:11:56.758 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2013-05-08 23:11:24(String)
+2023-05-12 23:11:56.759 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:11:56.759 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:11:56.759 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2013-05-08 23:11:24(String), 8(Long)
+2023-05-12 23:11:56.761 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:12:04.085 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:12:04.086 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2013-05-08 23:11:24(String)
+2023-05-12 23:12:04.088 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:04.088 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:12:04.089 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2013-05-08 23:11:24(String), 8(Long)
+2023-05-12 23:12:04.090 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:12:05.976 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:12:05.978 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2013-05-08 23:11:24(String)
+2023-05-12 23:12:05.979 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:05.980 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:12:05.980 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2013-05-08 23:11:24(String), 8(Long)
+2023-05-12 23:12:05.982 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:12:06.226 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:12:06.226 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2013-05-08 23:11:24(String)
+2023-05-12 23:12:06.227 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:06.228 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:12:06.228 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2013-05-08 23:11:24(String), 8(Long)
+2023-05-12 23:12:06.229 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:12:17.741 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create <= ?)
+2023-05-12 23:12:17.742 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2002-05-08 23:11:24(String)
+2023-05-12 23:12:17.743 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:17.743 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (gmt_create <= ?) LIMIT ?
+2023-05-12 23:12:17.743 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 2002-05-08 23:11:24(String), 8(Long)
+2023-05-12 23:12:17.745 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 1
+2023-05-12 23:12:28.519 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (gmt_create >= ? AND gmt_create <= ?)
+2023-05-12 23:12:28.520 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 2023-05-20 00:00:00(String), 2002-05-08 23:11:24(String)
+2023-05-12 23:12:28.521 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:37.470 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:12:37.471 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:12:37.472 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:12:37.473 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:12:37.473 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:12:37.475 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:14:35.258 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:14:35.258 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:14:35.259 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:14:35.259 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:14:35.260 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:14:35.261 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:14:41.789 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:14:41.790 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:14:41.792 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:14:41.792 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:14:41.792 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:14:41.793 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:14:56.225 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:14:56.225 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:14:56.226 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:14:56.227 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:14:56.227 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:14:56.228 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:15:20.160 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:15:20.160 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:15:20.162 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:20.162 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:15:20.162 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:15:20.165 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:15:24.802 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:15:24.803 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:15:24.805 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:24.805 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:15:24.805 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:15:24.806 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:15:26.276 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:15:26.276 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:15:26.277 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:26.278 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:15:26.278 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:15:26.279 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:15:31.630 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:15:31.630 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:15:31.632 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:31.633 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:15:31.633 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:15:31.635 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:15:35.813 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:15:35.813 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:15:35.815 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:35.815 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:15:35.815 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:15:35.816 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:15:37.269 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:15:37.269 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:15:37.270 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:37.270 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:15:37.270 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:15:37.271 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:15:54.996 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:15:54.996 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:15:54.997 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:15:54.998 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:15:54.998 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 16(Long), 8(Long)
+2023-05-12 23:15:55.000 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:02.334 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:16:02.334 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:16:02.335 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:07.272 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:16:07.272 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:16:07.273 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:07.273 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:16:07.273 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:16:07.274 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:09.805 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:16:09.805 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:16:09.807 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:09.808 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:16:09.809 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 16(Long), 8(Long)
+2023-05-12 23:16:09.810 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:14.212 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:16:14.212 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %Lo%(String)
+2023-05-12 23:16:14.213 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:19.587 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:16:19.588 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:16:19.588 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:19.589 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:16:19.589 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:16:19.591 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:30.370 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:16:30.371 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %Fu%(String)
+2023-05-12 23:16:30.372 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:30.372 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:16:30.372 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %Fu%(String), 8(Long)
+2023-05-12 23:16:30.373 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 1
+2023-05-12 23:16:33.194 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:16:33.194 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:16:33.196 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:33.196 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:16:33.197 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:16:33.197 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:34.664 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:16:34.665 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:16:34.665 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:16:34.666 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:16:34.666 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:16:34.667 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:16:40.024 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:16:40.024 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:16:40.025 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:18:11.080 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:18:11.081 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:18:11.082 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:18:11.082 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:18:11.082 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:18:11.083 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:18:31.463 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:18:31.464 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:18:31.465 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:18:31.465 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:18:31.466 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:18:31.467 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:18:55.616 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:18:55.616 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:18:55.617 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:18:55.617 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:18:55.617 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:18:55.619 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:18:57.334 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:18:57.335 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:18:57.337 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:18:57.337 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:18:57.337 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:18:57.339 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:20:44.423 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:20:44.423 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:20:44.425 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:47.389 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:47.389 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:47.391 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:47.391 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:20:47.391 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:20:47.392 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:20:51.379 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:51.379 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:51.381 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:51.382 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:20:51.382 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:20:51.383 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:20:52.620 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:52.620 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:52.622 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:52.622 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:20:52.622 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 16(Long), 8(Long)
+2023-05-12 23:20:52.624 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:20:54.114 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:54.114 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:54.116 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:54.116 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:20:54.117 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 24(Long), 8(Long)
+2023-05-12 23:20:54.118 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:20:56.775 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:56.776 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:56.777 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:56.778 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:20:56.778 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 16(Long), 8(Long)
+2023-05-12 23:20:56.779 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:20:59.055 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:20:59.056 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:20:59.057 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:20:59.057 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:20:59.057 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:20:59.058 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:21:00.563 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:21:00.563 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:21:00.564 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:21:00.564 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:21:00.564 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:21:00.566 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:21:03.902 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:21:03.902 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:21:03.903 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:21:03.904 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:21:03.904 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 16(Long), 8(Long)
+2023-05-12 23:21:03.905 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:21:17.538 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:21:17.539 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:21:17.540 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:21:17.540 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:21:17.540 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:21:17.543 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:21:23.283 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:21:23.283 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:21:23.284 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:21:23.284 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:21:23.285 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:21:23.286 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:22:02.170 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:22:02.170 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:22:02.170 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:22:05.817 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:22:05.817 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:22:05.818 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:22:05.819 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:22:05.820 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:22:05.821 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:22:18.764 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:22:18.764 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:22:18.767 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:22:18.767 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:22:18.767 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:22:18.769 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:22:22.626 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:22:22.626 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:22:22.627 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:22:22.628 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:22:22.628 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:22:22.629 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:22:31.243 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:22:31.243 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:22:31.245 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:22:31.245 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:22:31.245 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:22:31.247 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:22:57.231 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:22:57.232 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:22:57.233 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:25:28.854 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:25:28.854 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:25:28.858 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:25:28.859 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:25:28.859 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:25:28.862 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:25:40.988 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:25:40.989 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:25:40.990 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:25:40.991 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:25:40.991 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:25:40.992 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:25:46.957 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:25:46.957 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:25:46.958 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:25:46.959 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:25:46.959 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:25:46.959 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:25:54.217 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:25:54.217 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:25:54.219 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:27:38.827 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:27:38.828 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:27:38.829 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:02.368 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:29:02.369 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:29:02.370 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:02.370 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:29:02.371 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:29:02.373 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:29:07.719 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:29:07.720 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:29:07.721 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:07.721 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:29:07.721 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:29:07.722 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:29:38.175 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:29:38.176 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:29:38.177 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:38.177 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:29:38.178 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:29:38.180 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:29:40.596 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:29:40.596 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:29:40.598 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:40.599 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:29:40.599 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:29:40.599 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:29:46.530 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:29:46.530 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:29:46.531 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:46.532 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:29:46.532 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:29:46.534 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:29:56.457 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:29:56.457 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:29:56.458 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:29:56.458 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:29:56.458 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:29:56.459 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:30:02.681 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:30:02.681 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:30:02.682 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:31:26.858 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:31:26.858 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:31:26.860 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:31:26.863 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:31:26.863 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:31:26.865 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:31:41.080 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:31:41.080 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:31:41.082 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:31:41.082 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:31:41.082 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 10(Long)
+2023-05-12 23:31:41.084 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 10
+2023-05-12 23:31:58.677 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:31:58.677 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:31:58.679 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:31:58.679 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:31:58.679 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 10(Long), 10(Long)
+2023-05-12 23:31:58.681 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 10
+2023-05-12 23:32:25.259 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:32:25.259 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:32:25.260 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:34:40.891 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-12 23:34:40.899 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-12 23:34:46.432 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 32112 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-12 23:34:46.434 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-12 23:34:47.484 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-12 23:34:47.492 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-12 23:34:47.492 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 23:34:47.666 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-12 23:34:47.666 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1199 ms
+2023-05-12 23:34:49.065 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-12 23:34:49.286 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.334 seconds (JVM running for 4.683)
+2023-05-12 23:35:02.672 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 23:35:02.672 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-12 23:35:02.673 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-12 23:35:02.806 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-12 23:35:03.507 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-12 23:35:03.515 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:35:03.535 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:35:03.558 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:35:03.564 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:35:03.565 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 10(Long)
+2023-05-12 23:35:03.572 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 10
+2023-05-12 23:35:12.988 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:35:12.989 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:35:12.992 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:35:12.993 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:35:12.994 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:35:13.007 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:35:20.062 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:35:20.062 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:35:20.064 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:35:20.065 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:35:20.065 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:35:20.068 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:35:30.167 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:35:30.168 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:35:30.170 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:38:23.306 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m15s628ms664µs400ns).
+2023-05-12 23:38:30.038 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 28760 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-12 23:38:30.041 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-12 23:38:31.120 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-12 23:38:31.126 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-12 23:38:31.126 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-12 23:38:31.240 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-12 23:38:31.241 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1156 ms
+2023-05-12 23:38:32.563 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-12 23:38:32.753 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.191 seconds (JVM running for 4.199)
+2023-05-12 23:38:47.754 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 23:38:47.755 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-12 23:38:47.756 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-12 23:38:47.928 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-12 23:38:48.593 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-12 23:38:48.603 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:38:48.629 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:38:48.634 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:38:48.634 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:38:48.670 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:38:48.670 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:38:48.679 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:38:48.680 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:38:48.692 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:38:52.817 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:38:52.817 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:38:52.818 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:38:52.818 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:38:52.819 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:38:52.823 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:38:57.483 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:38:57.484 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %wang%(String)
+2023-05-12 23:38:57.485 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:00.532 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:39:00.532 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:39:00.534 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:00.535 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:39:00.535 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:39:00.541 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:39:02.223 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:39:02.223 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:39:02.225 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:02.226 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:39:02.227 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:39:02.228 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:39:06.835 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:39:06.835 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:39:06.836 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:31.278 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:39:31.278 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:39:31.280 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:31.281 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:39:31.281 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:39:31.284 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:39:37.177 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:39:37.178 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:39:37.179 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:37.180 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:39:37.180 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:39:37.181 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:39:54.312 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:39:54.313 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:39:54.315 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:54.316 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:39:54.316 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:39:54.319 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:39:55.881 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:39:55.881 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:39:55.883 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:39:55.884 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:39:55.884 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:39:55.887 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:40:01.849 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:40:01.850 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:40:01.851 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:05.422 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:40:05.423 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:40:05.424 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:05.424 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:40:05.425 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:40:05.426 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:40:06.850 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:40:06.850 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:40:06.852 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:06.853 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:40:06.853 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:40:06.854 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:40:16.198 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:40:16.199 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:40:16.200 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:39.622 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:40:39.623 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:40:39.624 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:39.624 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:40:39.624 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:40:39.627 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:40:43.688 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:40:43.690 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:40:43.691 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:40:43.691 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:40:43.691 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %test%(String), 8(Long)
+2023-05-12 23:40:43.693 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 1
+2023-05-12 23:41:24.022 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:41:24.022 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:41:24.024 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:41:24.024 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:41:24.025 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:41:24.028 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:41:25.778 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:41:25.779 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:41:25.780 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:41:25.780 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:41:25.780 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:41:25.782 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:41:34.995 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:41:34.995 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:41:34.996 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:43:25.295 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:43:25.295 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:43:25.296 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:43:25.296 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:43:25.297 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:43:25.299 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:43:29.614 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:43:29.615 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:43:29.616 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:43:29.616 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:43:29.617 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %王%(String), 8(Long)
+2023-05-12 23:43:29.618 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:45:40.477 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:45:40.477 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:45:40.478 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:45:40.479 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:45:40.479 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:45:40.481 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:45:41.948 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:45:41.949 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:45:41.950 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:45:41.951 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:45:41.951 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:45:41.952 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:45:47.087 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:45:47.087 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:45:47.089 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:48:40.945 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:48:40.945 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:48:40.946 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:48:40.947 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:48:40.947 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:48:40.948 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:48:42.349 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:48:42.350 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:48:42.351 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:48:42.352 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:48:42.352 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 24(Long), 8(Long)
+2023-05-12 23:48:42.353 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 2
+2023-05-12 23:48:47.597 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:48:47.597 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %王%(String)
+2023-05-12 23:48:47.598 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:48:53.755 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:48:53.756 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:48:53.756 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:48:53.758 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:48:53.758 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:48:53.759 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:49:00.602 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:49:00.602 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:49:00.603 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:00.604 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:49:00.604 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %test%(String), 8(Long)
+2023-05-12 23:49:00.607 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 1
+2023-05-12 23:49:04.408 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:49:04.408 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:49:04.409 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:04.410 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:49:04.410 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:49:04.411 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:49:05.623 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:49:05.624 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:49:05.625 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:05.626 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:49:05.626 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:49:05.628 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:49:09.863 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:49:09.863 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:49:09.864 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:55.742 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:49:55.742 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:49:55.743 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:55.743 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:49:55.743 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:49:55.745 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:49:58.800 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:49:58.800 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:49:58.802 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:49:58.802 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,?
+2023-05-12 23:49:58.802 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-12 23:49:58.804 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:50:04.804 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:50:04.804 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:50:04.804 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:56:04.838 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:56:04.839 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:56:04.840 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:56:04.842 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:56:04.843 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:56:04.844 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:57:34.674 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-12 23:57:34.675 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-12 23:57:34.677 [http-nio-8001-exec-5] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:57:34.678 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?
+2023-05-12 23:57:34.678 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-12 23:57:34.680 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-12 23:57:38.715 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?)
+2023-05-12 23:57:38.716 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: %test%(String)
+2023-05-12 23:57:38.718 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-12 23:57:38.719 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ?
+2023-05-12 23:57:38.719 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: %test%(String), 8(Long)
+2023-05-12 23:57:38.722 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 1

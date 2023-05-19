@@ -1,0 +1,357 @@
+2023-05-18 19:51:34.805 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 26636 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 19:51:34.808 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 19:51:36.686 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 19:51:36.701 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 19:51:36.701 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 19:51:37.005 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 19:51:37.005 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2131 ms
+2023-05-18 19:51:39.218 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 19:51:39.594 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 5.479 seconds (JVM running for 12.798)
+2023-05-18 19:52:15.025 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 19:52:15.025 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 19:52:15.026 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 19:52:31.371 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 19:52:31.561 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 19:52:31.569 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 19:52:31.596 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 19:52:31.627 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 19:52:31.637 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 19:52:31.637 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 19:52:31.648 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 20:06:28.723 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 20:06:28.736 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 20:22:28.054 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 10456 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 20:22:28.058 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:22:29.681 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:22:29.697 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:22:29.698 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:22:29.990 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:22:29.990 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1884 ms
+2023-05-18 20:22:32.089 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:22:32.457 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.973 seconds (JVM running for 11.181)
+2023-05-18 20:23:16.506 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 27464 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 20:23:16.509 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:23:17.900 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:23:17.910 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:23:17.910 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:23:18.150 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:23:18.150 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1593 ms
+2023-05-18 20:23:19.884 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:23:20.152 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.155 seconds (JVM running for 6.714)
+2023-05-18 20:24:26.733 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 10200 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 20:24:26.737 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:24:27.851 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:24:27.858 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:24:27.858 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:24:27.979 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:24:27.979 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1211 ms
+2023-05-18 20:24:29.376 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:24:29.580 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.196 seconds (JVM running for 4.103)
+2023-05-18 20:29:44.732 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 29436 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 20:29:44.734 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:29:46.245 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:29:46.255 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:29:46.255 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:29:46.498 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:29:46.498 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1715 ms
+2023-05-18 20:29:48.310 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:29:48.664 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.51 seconds (JVM running for 7.218)
+2023-05-18 20:30:04.607 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 21124 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-18 20:30:04.608 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:30:05.466 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:30:05.471 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:30:05.472 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:30:05.590 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:30:05.590 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 951 ms
+2023-05-18 20:30:07.047 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:30:07.289 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.003 seconds (JVM running for 3.893)
+2023-05-18 20:33:12.823 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 3080 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:33:12.825 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:33:14.284 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:33:14.293 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:33:14.293 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:33:14.525 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:33:14.525 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1653 ms
+2023-05-18 20:33:16.363 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:33:16.737 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.51 seconds (JVM running for 7.05)
+2023-05-18 20:33:37.544 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 12776 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:33:37.546 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:33:38.507 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:33:38.513 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:33:38.513 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:33:38.632 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:33:38.633 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1061 ms
+2023-05-18 20:33:40.140 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:33:40.358 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.169 seconds (JVM running for 4.072)
+2023-05-18 20:35:21.218 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 11600 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:35:21.221 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:35:22.288 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:35:22.296 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:35:22.296 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:35:22.423 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:35:22.423 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1170 ms
+2023-05-18 20:35:23.881 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:35:24.289 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.45 seconds (JVM running for 4.697)
+2023-05-18 20:35:48.579 [http-nio-8001-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 20:35:48.579 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 20:35:48.580 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 20:35:48.630 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 20:35:49.232 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 20:35:49.243 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 20:35:49.264 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 20:35:49.291 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 20:36:26.948 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 20:36:26.948 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 20:36:26.953 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 20:38:00.940 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 20:38:00.940 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 20:38:00.944 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 20:42:12.591 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 20:42:12.603 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 20:42:16.179 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 29116 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:42:16.181 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:42:17.027 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:42:17.034 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:42:17.034 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:42:17.144 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:42:17.144 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 937 ms
+2023-05-18 20:42:18.466 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:42:18.654 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.787 seconds (JVM running for 3.609)
+2023-05-18 20:48:32.373 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 24056 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:48:32.377 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:48:33.301 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 16312 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 20:48:33.305 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 20:48:34.577 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:48:34.611 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:48:34.613 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:48:35.221 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:48:35.222 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2777 ms
+2023-05-18 20:48:36.017 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 20:48:36.045 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 20:48:36.045 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 20:48:36.231 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 20:48:36.231 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2845 ms
+2023-05-18 20:48:37.629 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 20:48:38.006 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 6.666 seconds (JVM running for 12.553)
+2023-05-18 20:48:38.678 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8001 is already in use
+2023-05-18 20:48:38.687 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-05-18 20:48:38.701 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-18 20:48:38.738 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+2023-05-18 20:48:53.004 [http-nio-8001-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 20:48:53.004 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 20:48:53.005 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 20:48:53.083 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 20:48:53.293 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 20:48:53.303 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 20:48:53.326 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 20:48:53.364 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:00:05.547 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:00:05.571 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:00:14.329 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 26548 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:00:14.331 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:00:15.740 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:00:15.751 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:00:15.751 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:00:16.247 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:00:16.247 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1873 ms
+2023-05-18 21:00:18.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:00:18.666 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.837 seconds (JVM running for 11.73)
+2023-05-18 21:01:58.225 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:01:58.225 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:01:58.226 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 21:01:58.306 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:01:58.468 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:01:58.475 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 21:01:58.500 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 21:01:58.532 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:02:15.162 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 21:02:15.162 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 21:02:15.167 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:02:29.238 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 21:02:29.239 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 21:02:29.243 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:03:50.139 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 21:03:50.139 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 21:03:50.143 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:09:44.739 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:09:44.753 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:09:47.265 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 2612 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:09:47.267 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:09:48.167 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:09:48.173 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:09:48.173 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:09:48.330 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:09:48.331 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1037 ms
+2023-05-18 21:09:49.718 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:09:49.915 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.02 seconds (JVM running for 3.96)
+2023-05-18 21:12:05.675 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 11588 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:12:05.678 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:12:07.009 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:12:07.018 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:12:07.019 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:12:07.227 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:12:07.228 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1510 ms
+2023-05-18 21:12:08.865 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:12:09.121 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.932 seconds (JVM running for 6.442)
+2023-05-18 21:12:57.789 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:12:57.789 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:12:57.791 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-18 21:12:57.853 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:12:57.994 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:12:58.002 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-18 21:12:58.026 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-18 21:12:58.061 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 32
+2023-05-18 21:14:30.729 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:14:30.741 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:15:13.625 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 19104 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:15:13.627 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:15:14.464 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:15:14.470 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:15:14.471 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:15:14.583 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:15:14.583 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 929 ms
+2023-05-18 21:15:15.919 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:15:16.122 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.811 seconds (JVM running for 3.705)
+2023-05-18 21:15:20.288 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:15:20.288 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:15:20.289 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 21:15:29.255 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:15:29.882 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:15:29.887 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 21:15:29.902 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 21:15:29.932 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 21:15:29.938 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 21:15:29.939 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 21:15:29.946 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 21:15:42.909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:15:42.922 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:15:47.424 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 9728 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:15:47.426 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:15:48.755 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:15:48.764 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:15:48.764 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:15:48.964 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:15:48.964 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1498 ms
+2023-05-18 21:15:50.602 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:15:50.867 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.935 seconds (JVM running for 6.631)
+2023-05-18 21:15:54.351 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:15:54.352 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:15:54.352 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-05-18 21:15:54.775 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:15:54.971 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:15:54.981 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 21:15:55.010 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 21:15:55.035 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 21:15:55.044 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 21:15:55.045 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 21:15:55.053 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 21:17:31.183 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:17:31.205 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:20:38.654 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 8900 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:20:38.656 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:20:39.584 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:20:39.590 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:20:39.590 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:20:39.699 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:20:39.699 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1014 ms
+2023-05-18 21:20:41.058 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:20:41.250 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.938 seconds (JVM running for 3.825)
+2023-05-18 21:20:45.637 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:20:45.637 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:20:45.638 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-05-18 21:20:46.109 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:20:46.705 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:20:46.711 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 21:20:46.725 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 21:20:46.738 [http-nio-8001-exec-2] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 21:20:46.744 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 21:20:46.745 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 21:20:46.750 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 21:20:52.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-18 21:20:52.210 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-18 21:20:56.473 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 27064 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:20:56.476 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:20:57.779 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:20:57.787 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:20:57.788 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:20:57.994 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:20:57.994 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1478 ms
+2023-05-18 21:20:59.674 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:20:59.932 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.932 seconds (JVM running for 6.504)
+2023-05-18 21:21:06.271 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 25204 (E:\java\guli_parent\service\service_edu\target\classes started by jasper in E:\java\guli_parent)
+2023-05-18 21:21:06.273 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-18 21:21:07.612 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-18 21:21:07.621 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-18 21:21:07.621 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-18 21:21:07.834 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-18 21:21:07.834 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1516 ms
+2023-05-18 21:21:09.456 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-18 21:21:09.710 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.073 seconds (JVM running for 6.77)
+2023-05-18 21:21:13.117 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 21:21:13.117 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-18 21:21:13.118 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-18 21:21:15.529 [http-nio-8001-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-18 21:21:15.694 [http-nio-8001-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-18 21:21:15.703 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 21:21:15.725 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 21:21:15.763 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 21:21:15.772 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 21:21:15.773 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 21:21:15.781 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:53:49.976 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 23:53:49.977 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 23:53:49.978 [http-nio-8001-exec-7] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 23:53:49.979 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 23:53:49.979 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 23:53:49.984 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:53:59.078 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectById - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE id=? AND is_deleted=0
+2023-05-18 23:53:59.078 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectById - ==> Parameters: 1658022171759452162(String)
+2023-05-18 23:53:59.081 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectById - <==      Total: 1
+2023-05-18 23:54:02.243 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 23:54:02.244 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 23:54:02.245 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 23:54:02.246 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 23:54:02.246 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 23:54:02.248 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:54:05.818 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectById - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE id=? AND is_deleted=0
+2023-05-18 23:54:05.818 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectById - ==> Parameters: 1657349972195016705(String)
+2023-05-18 23:54:05.821 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectById - <==      Total: 1
+2023-05-18 23:54:09.374 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 23:54:09.375 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 23:54:09.376 [http-nio-8001-exec-1] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 23:54:09.377 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 23:54:09.378 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 23:54:09.380 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:54:12.119 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectById - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE id=? AND is_deleted=0
+2023-05-18 23:54:12.120 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectById - ==> Parameters: 1657322414862823425(String)
+2023-05-18 23:54:12.121 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectById - <==      Total: 1
+2023-05-18 23:54:15.154 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 23:54:15.154 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 23:54:15.156 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 23:54:15.157 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-18 23:54:15.157 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-18 23:54:15.159 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:54:17.315 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-18 23:54:17.315 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-18 23:54:17.317 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-18 23:54:17.318 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?,?
+2023-05-18 23:54:17.319 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long), 8(Long)
+2023-05-18 23:54:17.321 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-18 23:54:20.837 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectById - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE id=? AND is_deleted=0
+2023-05-18 23:54:20.837 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectById - ==> Parameters: 1189389726308478977(String)
+2023-05-18 23:54:20.839 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectById - <==      Total: 1

@@ -1,0 +1,569 @@
+2023-05-16 08:05:29.491 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 12292 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-16 08:05:29.494 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-16 08:05:32.175 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-16 08:05:32.208 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-16 08:05:32.208 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-16 08:05:32.398 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-16 08:05:32.399 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2834 ms
+2023-05-16 08:05:34.965 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-16 08:05:35.364 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 7.113 seconds (JVM running for 22.701)
+2023-05-16 08:05:45.845 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-16 08:05:45.846 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-16 08:05:45.847 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-16 08:05:57.284 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:05:57.287 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:05:57.287 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:05:57.287 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:05:57.289 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:05:57.289 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:05:57.290 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:05:57.290 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:05:57.450 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-16 08:05:57.901 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-16 08:05:57.918 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:57.971 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:05:58.022 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.041 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.042 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:05:58.044 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.047 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.047 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:05:58.051 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.052 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.054 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:05:58.056 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.059 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.059 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:05:58.062 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.064 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.064 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:05:58.067 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.068 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:05:58.068 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:05:58.071 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:05:58.094 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:05:58.097 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490946(String), 前端开发(String), 0(String), 2023-05-16T08:05:58.094(LocalDateTime), 2023-05-16T08:05:58.094(LocalDateTime)
+2023-05-16 08:05:58.098 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490947(String), 前端开发(String), 0(String), 2023-05-16T08:05:58.097(LocalDateTime), 2023-05-16T08:05:58.097(LocalDateTime)
+2023-05-16 08:05:58.099 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490948(String), 前端开发(String), 0(String), 2023-05-16T08:05:58.099(LocalDateTime), 2023-05-16T08:05:58.099(LocalDateTime)
+2023-05-16 08:05:58.101 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490949(String), 后端开发(String), 0(String), 2023-05-16T08:05:58.100(LocalDateTime), 2023-05-16T08:05:58.100(LocalDateTime)
+2023-05-16 08:05:58.102 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490950(String), 后端开发(String), 0(String), 2023-05-16T08:05:58.101(LocalDateTime), 2023-05-16T08:05:58.101(LocalDateTime)
+2023-05-16 08:05:58.104 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476545490951(String), 数据库开发(String), 0(String), 2023-05-16T08:05:58.103(LocalDateTime), 2023-05-16T08:05:58.103(LocalDateTime)
+2023-05-16 08:05:58.105 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658262476595822594(String), 数据库开发(String), 0(String), 2023-05-16T08:05:58.105(LocalDateTime), 2023-05-16T08:05:58.105(LocalDateTime)
+2023-05-16 08:05:58.161 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:15:09.087 [http-nio-8001-exec-4] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:15:09.249 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:15:09.250 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:15:09.250 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:15:09.252 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:15:09.252 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:15:09.253 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:15:09.253 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:15:09.253 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:15:09.283 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.284 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:15:09.287 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.292 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.293 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:15:09.296 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.301 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.302 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:15:09.304 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.308 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.310 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:15:09.313 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.316 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.316 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:15:09.318 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.322 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.323 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:15:09.326 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.330 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:15:09.331 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:15:09.334 [http-nio-8001-exec-4] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:15:09.335 [http-nio-8001-exec-4] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:17:15.854 [http-nio-8001-exec-6] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:17:15.950 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:17:15.951 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:17:15.951 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:17:15.952 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:17:15.953 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:17:15.953 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:17:15.955 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:17:15.956 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:17:15.978 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:15.980 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:17:15.982 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:15.988 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:15.989 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:17:15.993 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:15.999 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:15.999 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:17:16.003 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:16.006 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:16.006 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:17:16.008 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:16.012 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:16.014 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:17:16.017 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:16.019 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:16.021 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:17:16.022 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:16.027 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:17:16.028 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:17:16.030 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:17:16.031 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:18:10.883 [http-nio-8001-exec-7] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:18:10.958 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:18:10.959 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:18:10.960 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:18:10.960 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:18:10.961 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:18:10.961 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:18:10.962 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:18:10.963 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:18:10.967 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.968 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:10.970 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:10.976 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.977 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:10.980 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:10.984 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.984 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:10.986 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:10.989 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.989 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:18:10.991 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:10.994 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.994 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:18:10.996 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:10.999 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:10.999 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:18:11.001 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:11.004 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:11.004 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:18:11.007 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:11.007 [http-nio-8001-exec-7] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:18:26.142 [http-nio-8001-exec-8] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:18:30.201 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:18:30.202 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:18:30.202 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:18:30.203 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:18:30.203 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:18:30.203 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:18:30.204 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:18:30.204 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:18:30.218 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.218 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:30.220 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.223 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.224 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:30.225 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.228 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.229 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String), 0(Integer)
+2023-05-16 08:18:30.231 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.233 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.233 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:18:30.235 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.238 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.239 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String), 0(Integer)
+2023-05-16 08:18:30.240 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.244 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.244 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:18:30.246 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.249 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ? AND parent_id = ?)
+2023-05-16 08:18:30.249 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String), 0(Integer)
+2023-05-16 08:18:30.252 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:18:30.252 [http-nio-8001-exec-10] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:28:44.569 [http-nio-8001-exec-9] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:28:48.292 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:28:48.292 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:28:48.293 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:28:48.293 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:28:48.293 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:28:48.294 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:28:48.294 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:28:48.295 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:28:48.305 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.306 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:28:48.308 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:28:48.313 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:28:48.314 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658268223610191873(String), 前端开发(String), 0(String), 2023-05-16T08:28:48.312(LocalDateTime), 2023-05-16T08:28:48.312(LocalDateTime)
+2023-05-16 08:28:48.322 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:28:48.325 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.327 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:28:48.350 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:28:48.353 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.354 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:28:48.356 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:28:48.358 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.358 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:28:48.360 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:28:48.361 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:28:48.363 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658268223815712769(String), 后端开发(String), 0(String), 2023-05-16T08:28:48.361(LocalDateTime), 2023-05-16T08:28:48.361(LocalDateTime)
+2023-05-16 08:28:48.371 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:28:48.375 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.375 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:28:48.378 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:28:48.380 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.382 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:28:48.384 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:28:48.385 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:28:48.387 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658268223937347585(String), 数据库开发(String), 0(String), 2023-05-16T08:28:48.385(LocalDateTime), 2023-05-16T08:28:48.385(LocalDateTime)
+2023-05-16 08:28:48.393 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:28:48.396 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:28:48.397 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:28:48.400 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:28:48.401 [http-nio-8001-exec-1] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:36:44.330 [http-nio-8001-exec-2] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 08:36:48.220 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:36:48.220 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:36:48.221 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:36:48.221 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=javascript)
+2023-05-16 08:36:48.222 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:36:48.222 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:36:48.222 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:36:48.223 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:36:48.241 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.242 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:36:48.245 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.247 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.249 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:36:48.252 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.254 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.255 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:36:48.258 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.259 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.259 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:36:48.262 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.265 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.265 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:36:48.268 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.271 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.271 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:36:48.274 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.275 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.277 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:36:48.278 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.284 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.285 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:36:48.287 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.291 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.293 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223610191873(String), vue(String)
+2023-05-16 08:36:48.295 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.296 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.297 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270236850946050(String), vue(String), 1658268223610191873(String), 2023-05-16T08:36:48.296(LocalDateTime), 2023-05-16T08:36:48.296(LocalDateTime)
+2023-05-16 08:36:48.305 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.309 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.310 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:36:48.312 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.315 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.316 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223610191873(String), javascript(String)
+2023-05-16 08:36:48.317 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.319 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.320 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270236913860609(String), javascript(String), 1658268223610191873(String), 2023-05-16T08:36:48.319(LocalDateTime), 2023-05-16T08:36:48.319(LocalDateTime)
+2023-05-16 08:36:48.326 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.327 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.329 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:36:48.331 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.334 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.335 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223610191873(String), jquery(String)
+2023-05-16 08:36:48.337 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.338 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.338 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270236976775169(String), jquery(String), 1658268223610191873(String), 2023-05-16T08:36:48.337(LocalDateTime), 2023-05-16T08:36:48.337(LocalDateTime)
+2023-05-16 08:36:48.345 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.348 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.348 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:36:48.351 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.353 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.355 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223815712769(String), javascript(String)
+2023-05-16 08:36:48.355 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.358 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.358 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270237110992897(String), javascript(String), 1658268223815712769(String), 2023-05-16T08:36:48.357(LocalDateTime), 2023-05-16T08:36:48.357(LocalDateTime)
+2023-05-16 08:36:48.365 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.368 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.368 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:36:48.372 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.375 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.376 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223815712769(String), c++(String)
+2023-05-16 08:36:48.377 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.379 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.380 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270237173907457(String), c++(String), 1658268223815712769(String), 2023-05-16T08:36:48.379(LocalDateTime), 2023-05-16T08:36:48.379(LocalDateTime)
+2023-05-16 08:36:48.386 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.389 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.389 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:36:48.391 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.394 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.394 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223937347585(String), mysql(String)
+2023-05-16 08:36:48.395 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.398 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.398 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270237236822018(String), mysql(String), 1658268223937347585(String), 2023-05-16T08:36:48.398(LocalDateTime), 2023-05-16T08:36:48.398(LocalDateTime)
+2023-05-16 08:36:48.405 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.407 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:36:48.408 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:36:48.409 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:36:48.411 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:36:48.413 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658268223937347585(String), oracle(String)
+2023-05-16 08:36:48.413 [http-nio-8001-exec-3] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:36:48.416 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:36:48.416 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270237303930881(String), oracle(String), 1658268223937347585(String), 2023-05-16T08:36:48.415(LocalDateTime), 2023-05-16T08:36:48.415(LocalDateTime)
+2023-05-16 08:36:48.423 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:36:48.423 [http-nio-8001-exec-3] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:39:37.155 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:39:37.155 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:39:37.156 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:39:37.156 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=java)
+2023-05-16 08:39:37.156 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:39:37.156 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:39:37.157 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:39:37.157 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:39:37.160 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.161 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:39:37.164 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.164 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.165 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945117896706(String), 前端开发(String), 0(String), 2023-05-16T08:39:37.164(LocalDateTime), 2023-05-16T08:39:37.164(LocalDateTime)
+2023-05-16 08:39:37.172 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.175 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.175 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:39:37.177 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.180 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.180 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:39:37.182 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.185 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.186 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:39:37.187 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.189 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.190 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945247920129(String), 后端开发(String), 0(String), 2023-05-16T08:39:37.189(LocalDateTime), 2023-05-16T08:39:37.189(LocalDateTime)
+2023-05-16 08:39:37.196 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.198 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.198 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:39:37.201 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.203 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.204 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:39:37.206 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.207 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.208 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945315028994(String), 数据库开发(String), 0(String), 2023-05-16T08:39:37.207(LocalDateTime), 2023-05-16T08:39:37.207(LocalDateTime)
+2023-05-16 08:39:37.213 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.215 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.217 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:39:37.220 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.221 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.222 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:39:37.224 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.226 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.227 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), vue(String)
+2023-05-16 08:39:37.228 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.229 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.230 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945377943554(String), vue(String), 1658270945117896706(String), 2023-05-16T08:39:37.229(LocalDateTime), 2023-05-16T08:39:37.229(LocalDateTime)
+2023-05-16 08:39:37.236 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.239 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.239 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:39:37.241 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.243 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.244 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), javascript(String)
+2023-05-16 08:39:37.245 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.247 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.247 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945440858114(String), javascript(String), 1658270945117896706(String), 2023-05-16T08:39:37.247(LocalDateTime), 2023-05-16T08:39:37.247(LocalDateTime)
+2023-05-16 08:39:37.254 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.256 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.257 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:39:37.259 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.261 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.261 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), jquery(String)
+2023-05-16 08:39:37.263 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.265 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.267 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945507966978(String), jquery(String), 1658270945117896706(String), 2023-05-16T08:39:37.265(LocalDateTime), 2023-05-16T08:39:37.265(LocalDateTime)
+2023-05-16 08:39:37.273 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.276 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.276 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:39:37.278 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.281 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.281 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), java(String)
+2023-05-16 08:39:37.283 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.284 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.285 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945633796097(String), java(String), 1658270945247920129(String), 2023-05-16T08:39:37.284(LocalDateTime), 2023-05-16T08:39:37.284(LocalDateTime)
+2023-05-16 08:39:37.291 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.293 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.294 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:39:37.295 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.299 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.299 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), c++(String)
+2023-05-16 08:39:37.301 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.302 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.302 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945696710658(String), c++(String), 1658270945247920129(String), 2023-05-16T08:39:37.302(LocalDateTime), 2023-05-16T08:39:37.302(LocalDateTime)
+2023-05-16 08:39:37.309 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.311 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.312 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:39:37.314 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.316 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.317 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), mysql(String)
+2023-05-16 08:39:37.318 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.319 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.320 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945759625217(String), mysql(String), 1658270945315028994(String), 2023-05-16T08:39:37.319(LocalDateTime), 2023-05-16T08:39:37.319(LocalDateTime)
+2023-05-16 08:39:37.326 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.328 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:39:37.329 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:39:37.330 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:39:37.334 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:39:37.334 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), oracle(String)
+2023-05-16 08:39:37.336 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 0
+2023-05-16 08:39:37.337 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==>  Preparing: INSERT INTO edu_subject ( id, title, parent_id, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-16 08:39:37.337 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - ==> Parameters: 1658270945826734082(String), oracle(String), 1658270945315028994(String), 2023-05-16T08:39:37.337(LocalDateTime), 2023-05-16T08:39:37.337(LocalDateTime)
+2023-05-16 08:39:37.343 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduSubjectMapper.insert - <==    Updates: 1
+2023-05-16 08:39:37.343 [http-nio-8001-exec-5] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:40:11.694 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:40:11.694 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:40:11.694 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:40:11.694 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=java)
+2023-05-16 08:40:11.694 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:40:11.695 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:40:11.695 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:40:11.695 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:40:11.697 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.697 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:11.700 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.703 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.703 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:11.705 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.706 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.707 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:11.709 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.711 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.711 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:40:11.712 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.713 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.713 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:40:11.716 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.719 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.720 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:40:11.722 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.724 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.724 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:40:11.728 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.730 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.731 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:11.732 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.735 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.735 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), vue(String)
+2023-05-16 08:40:11.737 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.740 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.740 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:11.742 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.745 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.746 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), javascript(String)
+2023-05-16 08:40:11.748 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.750 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.750 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:11.753 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.755 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.756 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), jquery(String)
+2023-05-16 08:40:11.758 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.760 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.760 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:40:11.761 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.764 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.764 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), java(String)
+2023-05-16 08:40:11.766 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.769 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.769 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:40:11.772 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.774 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.775 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), c++(String)
+2023-05-16 08:40:11.777 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.780 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.780 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:40:11.782 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.785 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.785 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), mysql(String)
+2023-05-16 08:40:11.786 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.789 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:11.790 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:40:11.792 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.795 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:11.795 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), oracle(String)
+2023-05-16 08:40:11.798 [http-nio-8001-exec-6] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:11.799 [http-nio-8001-exec-6] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 08:40:26.218 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=vue)
+2023-05-16 08:40:26.219 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=javascript)
+2023-05-16 08:40:26.219 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=前端开发, twosubjectName=jquery)
+2023-05-16 08:40:26.219 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=java)
+2023-05-16 08:40:26.219 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=后端开发, twosubjectName=c++)
+2023-05-16 08:40:26.220 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=mysql)
+2023-05-16 08:40:26.220 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 解析到一条数据:ExcelSubjcet(oneSubjectName=数据库开发, twosubjectName=oracle)
+2023-05-16 08:40:26.220 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 7条数据，开始存储数据库！
+2023-05-16 08:40:26.223 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.223 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:26.225 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.227 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.227 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:26.230 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.233 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.233 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 前端开发(String)
+2023-05-16 08:40:26.235 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.238 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.238 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:40:26.240 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.264 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.265 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 后端开发(String)
+2023-05-16 08:40:26.269 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.270 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.272 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:40:26.274 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.275 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.275 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String), 数据库开发(String)
+2023-05-16 08:40:26.278 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.280 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.280 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:26.282 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.283 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.283 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), vue(String)
+2023-05-16 08:40:26.286 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.288 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.288 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:26.290 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.292 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.292 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), javascript(String)
+2023-05-16 08:40:26.293 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.295 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.296 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 前端开发(String)
+2023-05-16 08:40:26.297 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.299 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.301 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945117896706(String), jquery(String)
+2023-05-16 08:40:26.302 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.304 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.305 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:40:26.306 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.310 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.310 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), java(String)
+2023-05-16 08:40:26.312 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.314 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.314 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 后端开发(String)
+2023-05-16 08:40:26.317 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.319 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.319 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945247920129(String), c++(String)
+2023-05-16 08:40:26.321 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.323 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.324 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:40:26.325 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.326 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.326 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), mysql(String)
+2023-05-16 08:40:26.329 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.330 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (title = ?)
+2023-05-16 08:40:26.331 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 数据库开发(String)
+2023-05-16 08:40:26.333 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.335 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ? AND title = ?)
+2023-05-16 08:40:26.336 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 1658270945315028994(String), oracle(String)
+2023-05-16 08:40:26.338 [http-nio-8001-exec-8] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 1
+2023-05-16 08:40:26.338 [http-nio-8001-exec-8] INFO  c.a.listener.EduSubjectListener - 所有数据解析完成！
+2023-05-16 09:00:49.283 [http-nio-8001-exec-10] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-16 09:00:49.769 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-16 09:00:49.769 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-16 09:00:49.812 [http-nio-8001-exec-10] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-16 09:00:49.822 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-16 09:00:49.822 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-16 09:00:49.827 [http-nio-8001-exec-10] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-16 09:01:03.679 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-16 09:01:03.679 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-16 09:01:03.681 [http-nio-8001-exec-9] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-16 09:01:03.682 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-16 09:01:03.682 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-16 09:01:03.688 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8

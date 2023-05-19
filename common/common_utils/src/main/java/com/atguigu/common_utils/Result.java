@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class Result {
+public class Result<T> {
     @ApiModelProperty("是否成功")
     private Boolean success;
     @ApiModelProperty("返回状态码")
@@ -18,33 +18,47 @@ public class Result {
     @ApiModelProperty("返回消息")
     private String message;
     @ApiModelProperty("返回数据")
-    private Object data;
-
-    public static  Result success(Object data) {
-        return new Result(true,
+    private T data;
+    public static <T>  Result<T> success(T data) {
+        return new Result<>(true,
                 ResultCode.SUCCESS.getCode(),
                 ResultCode.SUCCESS.getMessage(),
                 data);
     }
 
-    public static  Result success(String message,Object data) {
-        return new Result(true,
+    public static <T>  Result<T> success() {
+        return new Result<>(true,
+                ResultCode.SUCCESS.getCode(),
+                ResultCode.SUCCESS.getMessage(),
+                null);
+    }
+
+    public static <T> Result<T> success(String message,T data) {
+        return new Result<T>(true,
                 ResultCode.SUCCESS.getCode(),
                 message,
                 data);
     }
 
-    public static Result fail() {
-        return new Result(false,
+    public static <T> Result<T> fail() {
+        return new Result<>(false,
                 ResultCode.COMMON_FAILED.getCode(),
                 ResultCode.COMMON_FAILED.getMessage(),
                 null);
     }
-    public static  Result fail(String message) {
-        return new Result(false,
+    public static <T> Result<T> fail(String message) {
+        return new <T> Result<T>(false,
                 ResultCode.COMMON_FAILED.getCode(),
                 message,
                 null);
     }
+
+    public static <T> Result<T> fail(Integer code,String message) {
+        return new <T> Result<T>(false,
+                code,
+                message,
+                null);
+    }
+
 
 }

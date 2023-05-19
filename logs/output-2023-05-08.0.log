@@ -1,0 +1,24 @@
+2023-05-08 09:34:52.556 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 3728 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-08 09:34:52.558 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-08 09:34:53.379 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-08 09:34:53.384 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-08 09:34:53.384 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-08 09:34:53.488 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-08 09:34:53.489 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 906 ms
+2023-05-08 09:34:54.706 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-08 09:34:54.893 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.67 seconds (JVM running for 3.511)
+2023-05-08 09:35:23.223 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_341 on LAPTOP-DH3774AL with PID 33996 (E:\java\projects\guli_parent\service\service_edu\target\classes started by jasper in E:\java\projects\guli_parent)
+2023-05-08 09:35:23.225 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-08 09:35:24.056 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-08 09:35:24.062 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-08 09:35:24.062 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-08 09:35:24.161 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-08 09:35:24.162 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 912 ms
+2023-05-08 09:35:25.354 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-08 09:35:25.528 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 2.628 seconds (JVM running for 3.484)
+2023-05-08 09:35:57.714 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-08 09:35:57.714 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-08 09:35:57.715 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-08 09:35:57.728 [http-nio-8001-exec-1] INFO  c.a.Controller.LoggerTestController - 日志输出 info
+2023-05-08 09:35:57.728 [http-nio-8001-exec-1] WARN  c.a.Controller.LoggerTestController - 日志输出 warn
+2023-05-08 09:35:57.728 [http-nio-8001-exec-1] ERROR c.a.Controller.LoggerTestController - 日志输出 error
