@@ -1,6 +1,6 @@
 package com.atguigu.common_utils;
 
-import lombok.*;
+import lombok.Getter;
 
 /**
  * @author jasper

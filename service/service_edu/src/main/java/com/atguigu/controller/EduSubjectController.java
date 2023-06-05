@@ -1,6 +1,7 @@
-package com.atguigu.Controller;
+package com.atguigu.controller;
 
-import com.atguigu.common_utils.Result;
+import com.atguigu.common_utils.R;
+import com.atguigu.pojo.dto.subject.OneSubject;
 import com.atguigu.service.EduSubjectService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author jasper
@@ -20,13 +22,26 @@ public class EduSubjectController {
     @Resource
     private EduSubjectService eduSubjectService;
 
+    /**
+     * add subject category
+     * @param file excel
+     * @return result
+     */
     @PostMapping("/addsubject")
-    public Result addSubject(MultipartFile file) {
+    public R<?> addSubject(MultipartFile file) {
         eduSubjectService.saveSubject(file,eduSubjectService);
-        return Result.success();
+        return R.success();
     }
+/**
+ * 课程分类列表
+ */
+@GetMapping("/getAllSubject")
+    public List<OneSubject> getAllSubject(){
+        return eduSubjectService.getAllSubject();
+}
+
 //    @GetMapping("getAllSubject")
-//    public Result getAllSubject(){
+//    public R getAllSubject(){
 //
 //    }
 }

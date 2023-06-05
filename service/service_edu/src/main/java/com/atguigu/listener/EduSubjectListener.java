@@ -78,7 +78,7 @@ public class EduSubjectListener implements ReadListener<ExcelSubjcet> {
      */
     private void saveData() {
         log.info("{}条数据，开始存储数据库！", cachedDataList.size());
-        cachedDataList.stream().forEach(item -> {
+        cachedDataList.forEach(item -> {
             LambdaQueryWrapper<EduSubject> wrapper = new LambdaQueryWrapper<>();
             wrapper.eq(EduSubject::getParentId,"0");
             wrapper.eq(EduSubject::getTitle,item.getOneSubjectName());
@@ -89,7 +89,7 @@ public class EduSubjectListener implements ReadListener<ExcelSubjcet> {
                 eduSubjectService.save(eduSubject);
             }
         });
-        cachedDataList.stream().forEach(
+        cachedDataList.forEach(
                 item -> {
                     LambdaQueryWrapper<EduSubject> wrapper = new LambdaQueryWrapper<>();
                     EduSubject one = eduSubjectService.getOne(new LambdaQueryWrapper<EduSubject>().eq(EduSubject::getTitle, item.getOneSubjectName()));

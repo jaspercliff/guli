@@ -1,10 +1,9 @@
-package com.atguigu.Controller;
+package com.atguigu.controller;
 
 import com.atguigu.common_utils.OssUploadUtil;
-import com.atguigu.common_utils.Result;
-import com.atguigu.config.CustomException;
+import com.atguigu.common_utils.R;
 import com.atguigu.pojo.EduTeacher;
-import com.atguigu.pojo.vo.TeacherQuery;
+import com.atguigu.pojo.dto.teacher.TeacherQuery;
 import com.atguigu.service.EduTeacherService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
@@ -30,9 +29,9 @@ public class EduTeacherContoller {
         this.teacherService = teacherService;
     }
     @PostMapping("upload")
-    public Result<String> uploadImage(@RequestParam("file") MultipartFile file){
+    public R<String> uploadImage(@RequestParam("file") MultipartFile file){
         String filePath = OssUploadUtil.upload(file);
-        return Result.success(filePath);
+        return R.success(filePath);
     }
     /**
      * 添加讲师
@@ -48,10 +47,10 @@ public class EduTeacherContoller {
 
     @ApiOperation("删除指定的讲师")
     @DeleteMapping("/{id}")
-    public Result<Boolean> removeTeacher(
+    public R<Boolean> removeTeacher(
             @ApiParam(name = "id", value = "讲师id", required = true)
             @PathVariable String id) {
-        return Result.success(teacherService.removeById(id));
+        return R.success(teacherService.removeById(id));
     }
 
     @ApiOperation("根据id查询讲师")

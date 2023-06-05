@@ -1,0 +1,76 @@
+2023-05-24 09:38:03.736 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 17980 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-24 09:38:03.739 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-24 09:38:05.216 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-24 09:38:05.227 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-24 09:38:05.228 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-24 09:38:05.625 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-24 09:38:05.625 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1835 ms
+2023-05-24 09:38:07.327 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-24 09:38:07.602 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.476 seconds (JVM running for 9.722)
+2023-05-24 09:38:37.128 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-24 09:38:37.129 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-24 09:38:37.131 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-24 17:57:24.137 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 29032 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-24 17:57:24.139 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-24 17:57:25.084 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-24 17:57:25.089 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-24 17:57:25.089 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-24 17:57:25.621 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-24 17:57:25.621 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1453 ms
+2023-05-24 17:57:26.734 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-24 17:57:26.945 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.129 seconds (JVM running for 6.159)
+2023-05-24 18:49:15.340 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-24 18:49:15.340 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-24 18:49:15.341 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-05-24 18:49:26.461 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-24 18:49:27.128 [http-nio-8001-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-24 18:49:27.221 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-24 18:49:27.235 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661323517874954242(String), (String), 1(BigDecimal), 1(Integer), 2023-05-24T18:49:27.217(LocalDateTime), 2023-05-24T18:49:27.217(LocalDateTime)
+2023-05-24 18:49:27.304 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-24 18:49:27.310 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-24 18:49:27.310 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - ==> Parameters: 1661323517874954242(String), (String), 2023-05-24T18:49:27.309(LocalDateTime), 2023-05-24T18:49:27.309(LocalDateTime)
+2023-05-24 18:49:27.377 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-24 19:03:50.925 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:03:50.927 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:03:50.981 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:06:33.856 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:06:33.856 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:06:33.893 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:06:46.755 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:06:46.755 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:06:46.791 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:08:42.890 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:08:42.890 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:08:42.927 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:09:47.968 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:09:47.969 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:09:48.004 [http-nio-8001-exec-5] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:10:02.639 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:10:02.640 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:10:02.675 [http-nio-8001-exec-7] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:11:26.927 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:11:26.928 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:11:26.964 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:12:14.875 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:12:14.876 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:12:14.909 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:13:14.431 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:13:14.432 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:13:14.479 [http-nio-8001-exec-1] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:15:12.893 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:15:12.894 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:15:12.929 [http-nio-8001-exec-2] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:15:17.323 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:15:17.324 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:15:17.358 [http-nio-8001-exec-6] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:15:44.952 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-05-24 19:15:44.952 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-05-24 19:15:44.987 [http-nio-8001-exec-9] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-05-24 19:15:59.073 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-24 19:15:59.074 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661330194560999426(String), 1189426437876985857(String), test(String), 1(BigDecimal), 1(Integer), 2023-05-24T19:15:59.073(LocalDateTime), 2023-05-24T19:15:59.073(LocalDateTime)
+2023-05-24 19:15:59.139 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-24 19:15:59.140 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-24 19:15:59.140 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - ==> Parameters: 1661330194560999426(String), just test(String), 2023-05-24T19:15:59.139(LocalDateTime), 2023-05-24T19:15:59.139(LocalDateTime)
+2023-05-24 19:15:59.208 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-24 19:28:42.545 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-24 19:28:42.871 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

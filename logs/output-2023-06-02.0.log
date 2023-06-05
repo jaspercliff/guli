@@ -1,0 +1,153 @@
+2023-06-02 14:41:53.606 [main] INFO  com.atguigu.VodApplication - Starting VodApplication using Java 1.8.0_371 on jaspercomputer with PID 22280 (D:\java\guli\service\service_vod\target\classes started by 21903 in D:\java\guli)
+2023-06-02 14:41:53.609 [main] INFO  com.atguigu.VodApplication - The following 1 profile is active: "dev"
+2023-06-02 14:41:55.595 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (http)
+2023-06-02 14:41:55.612 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-02 14:41:55.612 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-06-02 14:41:55.701 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 688 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-06-02 14:41:55.706 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-06-02 14:41:56.028 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-02 14:41:56.028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2344 ms
+2023-06-02 14:41:57.105 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (http) with context path ''
+2023-06-02 14:41:57.388 [main] INFO  com.atguigu.VodApplication - Started VodApplication in 4.656 seconds (JVM running for 12.641)
+2023-06-02 14:41:58.589 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-06-02 14:41:58.634 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-02 14:41:58.635 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-06-02 14:41:58.806 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-02 14:41:58.806 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3009 ms
+2023-06-02 14:42:01.246 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-06-02 14:42:01.779 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 7.39 seconds (JVM running for 13.298)
+2023-06-02 14:43:46.073 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 14:43:46.073 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-02 14:43:46.077 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-06-02 14:43:47.005 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-02 14:43:48.313 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-02 14:43:48.329 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 14:43:48.387 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664267786350612481(String)
+2023-06-02 14:43:48.476 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 14:43:48.509 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 14:43:48.509 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664267786350612481(String)
+2023-06-02 14:43:48.552 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 2
+2023-06-02 14:44:58.848 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-06-02 14:44:58.848 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-06-02 14:44:58.910 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-06-02 14:44:59.122 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-06-02 14:44:59.122 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-06-02 14:44:59.189 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-06-02 14:44:59.193 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-06-02 14:44:59.194 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-06-02 14:44:59.244 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-06-02 14:45:00.904 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_course WHERE is_deleted = 0 AND (status = ?)
+2023-06-02 14:45:00.905 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: Normal(String)
+2023-06-02 14:45:00.949 [http-nio-8001-exec-6] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-06-02 14:45:00.961 [http-nio-8001-exec-6] DEBUG c.a.m.EduCourseMapper.selectPage - ==>  Preparing: SELECT id,teacher_id,subject_id,subject_parent_id,title,price,lesson_num,cover,buy_count,view_count,version,status,is_deleted,gmt_create,gmt_modified FROM edu_course WHERE is_deleted=0 AND (status = ?) LIMIT ?
+2023-06-02 14:45:00.965 [http-nio-8001-exec-6] DEBUG c.a.m.EduCourseMapper.selectPage - ==> Parameters: Normal(String), 10(Long)
+2023-06-02 14:45:01.326 [http-nio-8001-exec-6] DEBUG c.a.m.EduCourseMapper.selectPage - <==      Total: 3
+2023-06-02 14:57:36.389 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0
+2023-06-02 14:57:36.389 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - ==> Parameters: 
+2023-06-02 14:57:36.389 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-06-02 14:57:36.392 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-06-02 14:57:36.430 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-06-02 14:57:36.434 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-06-02 14:57:36.434 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-06-02 14:57:36.474 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectList - <==      Total: 33
+2023-06-02 14:57:36.480 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-06-02 14:58:02.982 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-06-02 14:58:02.983 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1664526773952184322(String), 1189426437876985857(String), 1658270945633796097(String), 1658270945247920129(String), test(String), 13(BigDecimal), 12(Integer), http://cliffbucket.oss-cn-shanghai.aliyuncs.com/guli/avator/1/14/461867db-3d0a-4571-976a-f64c156a54ea.jpg(String), 2023-06-02T14:58:02.979(LocalDateTime), 2023-06-02T14:58:02.979(LocalDateTime)
+2023-06-02 14:58:03.070 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-06-02 14:58:03.086 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-06-02 14:58:03.086 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==> Parameters: 1664526773952184322(String), test(String), 2023-06-02T14:58:03.086(LocalDateTime), 2023-06-02T14:58:03.086(LocalDateTime)
+2023-06-02 14:58:03.169 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-06-02 14:58:03.860 [http-nio-8001-exec-1] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 14:58:03.864 [http-nio-8001-exec-1] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:58:03.903 [http-nio-8001-exec-1] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 0
+2023-06-02 14:58:03.907 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 14:58:03.907 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:58:03.949 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 14:58:13.736 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduChapterMapper.insert - ==>  Preparing: INSERT INTO edu_chapter ( id, course_id, title, sort, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-06-02 14:58:13.736 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduChapterMapper.insert - ==> Parameters: 1664526818848014337(String), 1664526773952184322(String), test_chapter(String), 0(Integer), 2023-06-02T14:58:13.695(LocalDateTime), 2023-06-02T14:58:13.695(LocalDateTime)
+2023-06-02 14:58:13.821 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduChapterMapper.insert - <==    Updates: 1
+2023-06-02 14:58:13.961 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 14:58:13.961 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:58:14.001 [http-nio-8001-exec-3] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 14:58:14.006 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 14:58:14.006 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:58:14.048 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 14:58:24.281 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 14:58:24.285 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-02 14:58:24.289 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-06-02 14:59:04.150 [http-nio-8001-exec-4] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 14:59:04.150 [http-nio-8001-exec-4] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:59:04.190 [http-nio-8001-exec-4] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 14:59:04.193 [http-nio-8001-exec-4] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 14:59:04.195 [http-nio-8001-exec-4] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:59:04.238 [http-nio-8001-exec-4] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 14:59:28.970 [http-nio-8001-exec-5] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 14:59:28.973 [http-nio-8001-exec-5] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:59:29.012 [http-nio-8001-exec-5] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 14:59:29.015 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 14:59:29.015 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 14:59:29.058 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 15:01:03.882 [http-nio-8001-exec-6] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 15:01:03.882 [http-nio-8001-exec-6] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:01:03.925 [http-nio-8001-exec-6] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 15:01:03.926 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 15:01:03.926 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:01:03.966 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 15:01:03.982 [http-nio-8001-exec-8] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 15:01:03.982 [http-nio-8001-exec-8] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:01:04.025 [http-nio-8001-exec-8] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 15:01:04.025 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 15:01:04.028 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:01:04.067 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 15:44:10.206 [http-nio-8001-exec-7] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 15:44:10.209 [http-nio-8001-exec-7] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:44:10.250 [http-nio-8001-exec-7] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 15:44:10.253 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 15:44:10.254 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:44:10.545 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 15:44:10.814 [http-nio-8001-exec-9] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 15:44:10.814 [http-nio-8001-exec-9] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:44:10.877 [http-nio-8001-exec-9] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 15:44:10.877 [http-nio-8001-exec-9] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 15:44:10.877 [http-nio-8001-exec-9] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 15:44:10.924 [http-nio-8001-exec-9] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 16:35:34.659 [http-nio-8001-exec-10] DEBUG c.a.m.EduChapterMapper.selectList - ==>  Preparing: SELECT id,course_id,title,sort,gmt_create,gmt_modified FROM edu_chapter WHERE (course_id = ?) ORDER BY gmt_create DESC
+2023-06-02 16:35:34.660 [http-nio-8001-exec-10] DEBUG c.a.m.EduChapterMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 16:35:34.707 [http-nio-8001-exec-10] DEBUG c.a.m.EduChapterMapper.selectList - <==      Total: 1
+2023-06-02 16:35:34.712 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduVideoMapper.selectList - ==>  Preparing: SELECT id,course_id,chapter_id,title,video_source_id,video_original_name,sort,play_count,is_free,duration,status,size,version,gmt_create,gmt_modified FROM edu_video WHERE (course_id = ?)
+2023-06-02 16:35:34.714 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduVideoMapper.selectList - ==> Parameters: 1664526773952184322(String)
+2023-06-02 16:35:34.755 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduVideoMapper.selectList - <==      Total: 0
+2023-06-02 18:39:12.968 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m21s774ms42µs700ns).
+2023-06-02 20:08:58.844 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m45s732ms238µs800ns).
+2023-06-02 23:58:26.941 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-02 23:58:42.397 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 21120 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-06-02 23:58:42.400 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-06-02 23:58:43.183 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=256b4973-cc4a-303d-b7b8-4d8bbf500887
+2023-06-02 23:58:43.396 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-06-02 23:58:43.402 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-02 23:58:43.402 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-06-02 23:58:43.523 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-02 23:58:43.523 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1078 ms
+2023-06-02 23:58:45.433 [main] INFO  c.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 4d86be56-db91-46ba-b729-ed0c9244030d
+2023-06-02 23:58:45.470 [main] INFO  org.reflections.Reflections - Reflections took 21 ms to scan 1 urls, producing 3 keys and 6 values 
+2023-06-02 23:58:45.494 [main] INFO  org.reflections.Reflections - Reflections took 11 ms to scan 1 urls, producing 4 keys and 9 values 
+2023-06-02 23:58:45.511 [main] INFO  org.reflections.Reflections - Reflections took 13 ms to scan 1 urls, producing 3 keys and 10 values 
+2023-06-02 23:58:45.722 [main] INFO  org.reflections.Reflections - Reflections took 208 ms to scan 153 urls, producing 0 keys and 0 values 
+2023-06-02 23:58:45.745 [main] INFO  org.reflections.Reflections - Reflections took 22 ms to scan 1 urls, producing 1 keys and 5 values 
+2023-06-02 23:58:45.770 [main] INFO  org.reflections.Reflections - Reflections took 21 ms to scan 1 urls, producing 1 keys and 7 values 
+2023-06-02 23:58:45.797 [main] INFO  org.reflections.Reflections - Reflections took 24 ms to scan 1 urls, producing 2 keys and 8 values 
+2023-06-02 23:58:45.988 [main] INFO  org.reflections.Reflections - Reflections took 187 ms to scan 153 urls, producing 0 keys and 0 values 
+2023-06-02 23:58:45.989 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] RpcClient init label, labels = {module=naming, source=sdk}
+2023-06-02 23:58:45.991 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2023-06-02 23:58:45.991 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2023-06-02 23:58:45.992 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2023-06-02 23:58:45.993 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+2023-06-02 23:58:47.071 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1685721526868_127.0.0.1_64334
+2023-06-02 23:58:47.071 [com.alibaba.nacos.client.remote.worker] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Notify connected event to listeners.
+2023-06-02 23:58:47.072 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-06-02 23:58:47.072 [main] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$797/228627024
+2023-06-02 23:58:47.122 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-06-02 23:58:47.135 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP service_edu 192.168.1.115:8001 register finished
+2023-06-02 23:58:47.569 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 5.79 seconds (JVM running for 6.474)
+2023-06-02 23:58:47.853 [nacos-grpc-client-executor-11] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Receive server push request, request = NotifySubscriberRequest, requestId = 1
+2023-06-02 23:58:47.862 [nacos-grpc-client-executor-11] INFO  c.alibaba.nacos.common.remote.client - [4d86be56-db91-46ba-b729-ed0c9244030d] Ack server push request, request = NotifySubscriberRequest, requestId = 1

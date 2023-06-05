@@ -1,6 +1,6 @@
 package com.atguigu.config;
 
-import com.atguigu.common_utils.Result;
+import com.atguigu.common_utils.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * @author jasper
@@ -26,7 +25,7 @@ public class ResponseAdvice implements  ResponseBodyAdvice<Object> {
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
                                   Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
-        if (body instanceof Result) {
+        if (body instanceof R) {
             return body;
         }
         if(body instanceof Page){
@@ -36,8 +35,8 @@ public class ResponseAdvice implements  ResponseBodyAdvice<Object> {
             map.put("records",page.getRecords());
             map.put("current",page.getCurrent());
             map.put("size",page.getSize());
-            return Result.success(map);
+            return R.success(map);
         }
-        return Result.success(body);
+        return R.success(body);
     }
 }

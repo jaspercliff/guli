@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "aliyun.keySecret",
+      "type": "java.lang.String",
+      "description": "Description for aliyun.keySecret."
+    },
+    {
+      "name": "aliyun.keyId",
+      "type": "java.lang.String",
+      "description": "Description for aliyun.keyId."
+    }
+  ] }

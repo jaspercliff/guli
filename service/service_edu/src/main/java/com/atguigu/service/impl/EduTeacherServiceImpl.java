@@ -1,17 +1,14 @@
 package com.atguigu.service.impl;
 
-import com.atguigu.pojo.vo.TeacherQuery;
+import com.atguigu.mapper.EduTeacherMapper;
+import com.atguigu.pojo.EduTeacher;
+import com.atguigu.pojo.dto.teacher.TeacherQuery;
+import com.atguigu.service.EduTeacherService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.atguigu.pojo.EduTeacher;
-import com.atguigu.service.EduTeacherService;
-import com.atguigu.mapper.EduTeacherMapper;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.List;
 import java.util.Optional;
 
 /**

@@ -1,8 +1,6 @@
-package com.atguigu.Controller;
+package com.atguigu.controller;
 
-import cn.hutool.core.lang.hash.Hash;
 import io.swagger.annotations.Api;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

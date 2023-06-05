@@ -1,6 +1,5 @@
-package com.atguigu.pojo.vo;
+package com.atguigu.pojo.dto.teacher;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;

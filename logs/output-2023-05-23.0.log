@@ -1,0 +1,254 @@
+2023-05-23 15:24:14.519 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-23 15:24:14.531 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-23 15:24:14.573 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-23 15:24:14.575 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-23 15:24:14.576 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-23 15:24:14.628 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-23 15:24:18.730 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-05-23 15:24:18.731 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-05-23 15:24:18.763 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-05-23 15:24:18.764 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-05-23 15:24:18.765 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-05-23 15:24:18.798 [http-nio-8001-exec-9] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-05-23 15:24:22.116 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-05-23 15:24:22.117 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-05-23 15:24:22.151 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-05-23 15:24:22.153 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-05-23 15:24:22.154 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-05-23 15:24:22.190 [http-nio-8001-exec-10] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-05-23 15:24:47.220 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-05-23 15:24:47.221 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-05-23 15:24:47.255 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-05-23 15:24:47.257 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-05-23 15:24:47.258 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-05-23 15:24:47.290 [http-nio-8001-exec-1] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-05-23 16:32:51.217 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 16:32:51.233 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 16:33:01.276 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 1200 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 16:33:01.280 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 16:33:03.170 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 16:33:03.182 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 16:33:03.182 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 16:33:03.464 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 16:33:03.464 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+2023-05-23 16:33:05.524 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 16:33:05.915 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 5.353 seconds (JVM running for 9.31)
+2023-05-23 16:35:58.459 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 30472 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 16:35:58.462 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 16:36:00.121 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 16:36:00.130 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 16:36:00.131 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 16:36:00.400 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 16:36:00.400 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1883 ms
+2023-05-23 16:36:02.218 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 16:36:02.592 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.736 seconds (JVM running for 7.512)
+2023-05-23 16:55:46.469 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 24724 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 16:55:46.472 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 16:55:48.266 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 16:55:48.279 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 16:55:48.280 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 16:55:48.555 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 16:55:48.555 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2029 ms
+2023-05-23 16:55:50.480 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 16:55:50.846 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 5.103 seconds (JVM running for 13.438)
+2023-05-23 16:56:19.426 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 16:56:19.426 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 16:56:19.429 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-05-23 16:56:23.346 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 16:56:24.000 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 16:56:24.027 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-23 16:56:24.067 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-23 16:56:24.140 [http-nio-8001-exec-3] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-23 16:56:24.152 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-23 16:56:24.154 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-23 16:56:24.210 [http-nio-8001-exec-3] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-23 17:33:39.603 [http-nio-8001-exec-4] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 17:33:40.375 [http-nio-8001-exec-4] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, title, price ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-23 17:33:40.377 [http-nio-8001-exec-4] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660942059158056962(String), String(String), String(String), javaSe(String), 0.0(BigDecimal)
+2023-05-23 17:45:34.560 [http-nio-8001-exec-6] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 17:45:34.883 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, title, price ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-23 17:45:34.885 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660945056013430785(String), String(String), String(String), java basic(String), 0.0(BigDecimal)
+2023-05-23 17:47:57.392 [http-nio-8001-exec-7] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 17:47:57.644 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, title, price ) VALUES ( ?, ?, ?, ?, ? )
+2023-05-23 17:47:57.645 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660945654796464129(String), String(String), String(String), java basic(String), 0.0(BigDecimal)
+2023-05-23 17:48:38.288 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 17:48:38.674 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 17:48:47.059 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 12916 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 17:48:47.062 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 17:48:48.665 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 17:48:48.675 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 17:48:48.675 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 17:48:48.937 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 17:48:48.937 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1817 ms
+2023-05-23 17:48:50.715 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 17:48:51.061 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.72 seconds (JVM running for 8.555)
+2023-05-23 17:49:47.693 [http-nio-8001-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 17:49:47.694 [http-nio-8001-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 17:49:47.696 [http-nio-8001-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-23 17:49:47.844 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 17:49:48.442 [http-nio-8001-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 17:53:01.159 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 17:53:01.551 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 17:53:11.358 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 10604 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 17:53:11.361 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 17:53:12.965 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 17:53:12.975 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 17:53:12.975 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 17:53:13.228 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 17:53:13.228 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1810 ms
+2023-05-23 17:53:15.000 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 17:53:15.332 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 4.561 seconds (JVM running for 8.323)
+2023-05-23 17:54:22.838 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 17:54:22.839 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 17:54:22.841 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-23 17:54:22.992 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 17:54:23.639 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 17:54:23.841 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 17:54:23.903 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660947274590547970(String), String(String), String(String), String(String), java basic(String), 0.0(BigDecimal), {}(LinkedHashMap), String(String), 2023-05-23T17:54:23.828(LocalDateTime), 2023-05-23T17:54:23.828(LocalDateTime)
+2023-05-23 17:55:04.321 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 17:55:04.323 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660947444371779585(String), String(String), String(String), String(String), java basic(String), 0.0(BigDecimal), 6(Integer), String(String), 2023-05-23T17:55:04.321(LocalDateTime), 2023-05-23T17:55:04.321(LocalDateTime)
+2023-05-23 17:55:04.401 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 17:55:04.424 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 17:55:04.426 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==> Parameters: 1660947444371779585(String), java basic description(String), 2023-05-23T17:55:04.424(LocalDateTime), 2023-05-23T17:55:04.424(LocalDateTime)
+2023-05-23 17:55:04.503 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 18:44:18.551 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m50s64ms90µs100ns).
+2023-05-23 19:01:27.217 [http-nio-8001-exec-4] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 19:01:27.505 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d474248 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.507 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53c6e4ee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.509 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34f4e568 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.510 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43d6b4bc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.512 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a3757b0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.514 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d7e4487 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.516 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7bfb62c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.517 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3bb120d8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.519 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34e0346f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.521 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4b451408 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 19:01:27.758 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-23 19:01:27.759 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-23 19:01:27.827 [http-nio-8001-exec-4] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-23 19:01:27.832 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-23 19:01:27.832 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-23 19:01:27.871 [http-nio-8001-exec-4] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-23 20:05:41.414 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0
+2023-05-23 20:05:41.415 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - ==> Parameters: 
+2023-05-23 20:05:41.446 [http-nio-8001-exec-8] DEBUG c.a.m.E.selectPage_mpCount - <==      Total: 1
+2023-05-23 20:05:41.448 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==>  Preparing: SELECT id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 ORDER BY gmt_create DESC LIMIT ?
+2023-05-23 20:05:41.448 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - ==> Parameters: 8(Long)
+2023-05-23 20:05:41.485 [http-nio-8001-exec-8] DEBUG c.a.m.EduTeacherMapper.selectPage - <==      Total: 8
+2023-05-23 20:09:32.291 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-05-23 20:09:32.292 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-05-23 20:09:32.324 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-05-23 20:09:32.327 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-05-23 20:09:32.327 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-05-23 20:09:32.361 [http-nio-8001-exec-5] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-05-23 20:11:09.373 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id = ?)
+2023-05-23 20:11:09.373 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(Integer)
+2023-05-23 20:11:09.406 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 3
+2023-05-23 20:11:09.408 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==>  Preparing: SELECT id,title,parent_id,sort,gmt_create,gmt_modified FROM edu_subject WHERE (parent_id <> ?)
+2023-05-23 20:11:09.409 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - ==> Parameters: 0(String)
+2023-05-23 20:11:09.443 [http-nio-8001-exec-7] DEBUG c.a.m.EduSubjectMapper.selectList - <==      Total: 7
+2023-05-23 21:18:56.814 [http-nio-8001-exec-10] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 21:19:55.368 [http-nio-8001-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54b66f8a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:19:56.764 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50d2524 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:19:58.355 [http-nio-8001-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62050b04 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:19:58.557 [http-nio-8001-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@496940b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:05.380 [http-nio-8001-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26d5a588 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:06.785 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19c12380 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:08.376 [http-nio-8001-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@268a4cf6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:08.505 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, gmt_create, gmt_modified ) VALUES ( ?, ?, ? )
+2023-05-23 21:20:08.506 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660999051901890561(String), 2023-05-23T21:20:08.504(LocalDateTime), 2023-05-23T21:20:08.504(LocalDateTime)
+2023-05-23 21:20:08.580 [http-nio-8001-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50851c03 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:08.647 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, gmt_create, gmt_modified ) VALUES ( ?, ?, ? )
+2023-05-23 21:20:08.648 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1660999052497481729(String), 2023-05-23T21:20:08.647(LocalDateTime), 2023-05-23T21:20:08.647(LocalDateTime)
+2023-05-23 21:20:15.388 [http-nio-8001-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12793918 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:20:16.794 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43cd57a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-05-23 21:29:09.516 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:29:09.517 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661001321079074818(String), (String), 5(BigDecimal), 3(Integer), 2023-05-23T21:29:09.516(LocalDateTime), 2023-05-23T21:29:09.516(LocalDateTime)
+2023-05-23 21:37:03.026 [http-nio-8001-exec-8] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 21:37:03.256 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:37:03.258 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661003308071874562(String), String(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:37:03.256(LocalDateTime), 2023-05-23T21:37:03.256(LocalDateTime)
+2023-05-23 21:37:03.321 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:37:03.324 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:37:03.324 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - ==> Parameters: 1661003308071874562(String), hahaha(String), 2023-05-23T21:37:03.322(LocalDateTime), 2023-05-23T21:37:03.322(LocalDateTime)
+2023-05-23 21:37:03.387 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:37:16.908 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:37:16.909 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661003365332512769(String), String1(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:37:16.908(LocalDateTime), 2023-05-23T21:37:16.908(LocalDateTime)
+2023-05-23 21:37:16.970 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:37:16.971 [http-nio-8001-exec-5] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:37:16.972 [http-nio-8001-exec-5] DEBUG c.a.m.E.insert - ==> Parameters: 1661003365332512769(String), hahaha(String), 2023-05-23T21:37:16.971(LocalDateTime), 2023-05-23T21:37:16.971(LocalDateTime)
+2023-05-23 21:37:17.033 [http-nio-8001-exec-5] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:37:29.439 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:37:29.440 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661003417878753282(String), 1(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:37:29.438(LocalDateTime), 2023-05-23T21:37:29.438(LocalDateTime)
+2023-05-23 21:37:29.501 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:37:29.502 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:37:29.503 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - ==> Parameters: 1661003417878753282(String), hahaha(String), 2023-05-23T21:37:29.502(LocalDateTime), 2023-05-23T21:37:29.502(LocalDateTime)
+2023-05-23 21:37:29.564 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:37:50.693 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:37:50.694 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661003507016101889(String), String(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:37:50.693(LocalDateTime), 2023-05-23T21:37:50.693(LocalDateTime)
+2023-05-23 21:37:50.756 [http-nio-8001-exec-2] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:37:50.757 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:37:50.757 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - ==> Parameters: 1661003507016101889(String), hahaha(String), 2023-05-23T21:37:50.756(LocalDateTime), 2023-05-23T21:37:50.756(LocalDateTime)
+2023-05-23 21:37:50.816 [http-nio-8001-exec-2] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:40:30.248 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:40:30.249 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661004176242470914(String), String(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:40:30.248(LocalDateTime), 2023-05-23T21:40:30.248(LocalDateTime)
+2023-05-23 21:40:30.310 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:40:30.312 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:40:30.312 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==> Parameters: 1661004176242470914(String), hahaha(String), 2023-05-23T21:40:30.312(LocalDateTime), 2023-05-23T21:40:30.312(LocalDateTime)
+2023-05-23 21:40:30.373 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:40:41.077 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 21:40:41.392 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-23 21:40:47.336 [main] INFO  com.atguigu.EduApplication - Starting EduApplication using Java 1.8.0_371 on jaspercomputer with PID 25180 (D:\java\guli\service\service_edu\target\classes started by 21903 in D:\java\guli)
+2023-05-23 21:40:47.338 [main] INFO  com.atguigu.EduApplication - The following 1 profile is active: "dev"
+2023-05-23 21:40:48.504 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2023-05-23 21:40:48.513 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-23 21:40:48.513 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-23 21:40:48.698 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-23 21:40:48.698 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1321 ms
+2023-05-23 21:40:50.088 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-23 21:40:50.353 [main] INFO  com.atguigu.EduApplication - Started EduApplication in 3.485 seconds (JVM running for 6.539)
+2023-05-23 21:40:56.172 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-23 21:40:56.172 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-23 21:40:56.173 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-05-23 21:40:56.237 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-23 21:40:56.685 [http-nio-8001-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-23 21:40:56.811 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:40:56.835 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661004287665258498(String), String(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:40:56.804(LocalDateTime), 2023-05-23T21:40:56.804(LocalDateTime)
+2023-05-23 21:40:56.901 [http-nio-8001-exec-1] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:40:56.913 [http-nio-8001-exec-1] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:40:56.914 [http-nio-8001-exec-1] DEBUG c.a.m.E.insert - ==> Parameters: 1661004287665258498(String), hahaha(String), 2023-05-23T21:40:56.913(LocalDateTime), 2023-05-23T21:40:56.913(LocalDateTime)
+2023-05-23 21:40:56.975 [http-nio-8001-exec-1] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:46:50.190 [http-nio-8001-exec-3] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.atguigu.mapper]' package. Please check your configuration.
+2023-05-23 21:46:50.383 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, teacher_id, subject_id, subject_parent_id, title, price, cover, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-05-23 21:46:50.384 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661005770666295298(String), String(String), String(String), String(String), hahaha(String), 0.0(BigDecimal), String(String), 2023-05-23T21:46:50.382(LocalDateTime), 2023-05-23T21:46:50.382(LocalDateTime)
+2023-05-23 21:46:50.448 [http-nio-8001-exec-3] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:46:50.449 [http-nio-8001-exec-3] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:46:50.451 [http-nio-8001-exec-3] DEBUG c.a.m.E.insert - ==> Parameters: 1661005770666295298(String), hahaha(String), 2023-05-23T21:46:50.449(LocalDateTime), 2023-05-23T21:46:50.449(LocalDateTime)
+2023-05-23 21:46:50.512 [http-nio-8001-exec-3] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:47:56.699 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:47:56.701 [http-nio-8001-exec-5] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661006048819953665(String), (String), 10(BigDecimal), 10(Integer), 2023-05-23T21:47:56.699(LocalDateTime), 2023-05-23T21:47:56.699(LocalDateTime)
+2023-05-23 21:49:10.168 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:49:10.168 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661006356950302722(String), (String), 10(BigDecimal), 10(Integer), 2023-05-23T21:49:10.167(LocalDateTime), 2023-05-23T21:49:10.167(LocalDateTime)
+2023-05-23 21:49:10.232 [http-nio-8001-exec-6] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:49:10.233 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, gmt_create, gmt_modified ) VALUES ( ?, ?, ? )
+2023-05-23 21:49:10.233 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - ==> Parameters: 1661006356950302722(String), 2023-05-23T21:49:10.233(LocalDateTime), 2023-05-23T21:49:10.233(LocalDateTime)
+2023-05-23 21:49:10.296 [http-nio-8001-exec-6] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:50:24.200 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:50:24.201 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661006667467210754(String), (String), 1(BigDecimal), 1(Integer), 2023-05-23T21:50:24.200(LocalDateTime), 2023-05-23T21:50:24.200(LocalDateTime)
+2023-05-23 21:50:24.264 [http-nio-8001-exec-8] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:50:24.265 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, gmt_create, gmt_modified ) VALUES ( ?, ?, ? )
+2023-05-23 21:50:24.266 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - ==> Parameters: 1661006667467210754(String), 2023-05-23T21:50:24.265(LocalDateTime), 2023-05-23T21:50:24.265(LocalDateTime)
+2023-05-23 21:50:24.328 [http-nio-8001-exec-8] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:52:10.891 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:52:10.892 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661007114953310210(String), (String), 10(BigDecimal), 5(Integer), 2023-05-23T21:52:10.891(LocalDateTime), 2023-05-23T21:52:10.891(LocalDateTime)
+2023-05-23 21:52:10.955 [http-nio-8001-exec-7] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:52:10.956 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, gmt_create, gmt_modified ) VALUES ( ?, ?, ? )
+2023-05-23 21:52:10.956 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - ==> Parameters: 1661007114953310210(String), 2023-05-23T21:52:10.956(LocalDateTime), 2023-05-23T21:52:10.956(LocalDateTime)
+2023-05-23 21:52:11.018 [http-nio-8001-exec-7] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 21:55:02.746 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==>  Preparing: INSERT INTO edu_course ( id, title, price, lesson_num, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ? )
+2023-05-23 21:55:02.747 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - ==> Parameters: 1661007835794784257(String), jasper cliff(String), 10(BigDecimal), 10(Integer), 2023-05-23T21:55:02.746(LocalDateTime), 2023-05-23T21:55:02.746(LocalDateTime)
+2023-05-23 21:55:02.809 [http-nio-8001-exec-10] DEBUG c.a.mapper.EduCourseMapper.insert - <==    Updates: 1
+2023-05-23 21:55:02.810 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==>  Preparing: INSERT INTO edu_course_description ( id, description, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ? )
+2023-05-23 21:55:02.811 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - ==> Parameters: 1661007835794784257(String), asdasfasfs(String), 2023-05-23T21:55:02.810(LocalDateTime), 2023-05-23T21:55:02.810(LocalDateTime)
+2023-05-23 21:55:02.872 [http-nio-8001-exec-10] DEBUG c.a.m.E.insert - <==    Updates: 1
+2023-05-23 22:48:08.621 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-23 22:48:08.937 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
